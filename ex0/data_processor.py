@@ -119,8 +119,9 @@ def main() -> None:
     print("\nTesting Numeric Processor...")
     print("Trying to validate input '42':", numeric.validate(42))
     print("Trying to validate input 'Hello':", numeric.validate("Hello"))
-
     try:
+        print("Test invalid ingestion of string 'foo' "
+              "without prior validation:")
         numeric.ingest("foo")
     except ValueError as error:
         print(f"Got exception: {error}")
